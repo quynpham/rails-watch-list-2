@@ -5,6 +5,8 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @bookmark = Bookmark.new
+    @bookmarks = @list.bookmarks
   end
 
   def new
@@ -14,12 +16,12 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     @list.save
-    redirect_to list_path(@list)
+    redirect_to list_path(list)
   end
 
   private
 
   def list_params
-    params.require(:list).permit(:name, :movie)
+    params.require(:list).permit(:name)
   end
 end

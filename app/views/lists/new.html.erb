@@ -1,6 +1,7 @@
 <%= simple_form_for(@list) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.button :submit %>
   <%= f.submit %>
 <% end %>
+
+<%= link_to 'Back to homepage', lists_path %>

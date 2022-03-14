@@ -1,6 +1,23 @@
 <h1><%= @list.name %></h1>
+
+
 <% @list.bookmarks.each do |bookmark| %>
 <ul>
-  <li><%= bookmark.movie.title %></li>
+  <li>
+    <%= image_tag bookmark.movie.poster_url, alt: bookmark.movie.title %>
+    <strong><%= bookmark.movie.title %></strong>
+    Rating : <%= bookmark.movie.rating %>/10
+    <%= bookmark.movie.overview %>
+    <%= bookmark.comment %>
+    <%= link_to 'Delete bookmark', bookmark_path(bookmark), method: :delete %>
+  </li>
 </ul>
 <% end %>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :movie, promot: 'Select a movie', input_html: { data: {controller: 'select2'}} %>
+  <%= f.input :comment, placeholder: "Add your comment." %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Back to homepage', lists_path %>
