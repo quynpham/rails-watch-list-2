@@ -4,12 +4,18 @@
 <% @list.bookmarks.each do |bookmark| %>
 <ul>
   <li>
-    <%= image_tag bookmark.movie.poster_url, alt: bookmark.movie.title %>
-    <strong><%= bookmark.movie.title %></strong>
-    Rating : <%= bookmark.movie.rating %>/10
-    <%= bookmark.movie.overview %>
-    <%= bookmark.comment %>
-    <%= link_to 'Delete bookmark', bookmark_path(bookmark), method: :delete %>
+    <div>
+      <%= image_tag bookmark.movie.poster_url, alt: bookmark.movie.title %>
+      <div>
+        <strong><%= bookmark.movie.title %></strong>
+        <span>Rating : <%= bookmark.movie.rating %>/10</span>
+        <p><%= bookmark.movie.overview %></p>
+        <div>
+          <p><%= bookmark.comment %></p>
+          <p><%= link_to 'Delete bookmark', bookmark_path(bookmark), method: :delete %></p>
+        </div>
+      </div>
+    </div>
   </li>
 </ul>
 <% end %>
