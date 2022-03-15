@@ -1,4 +1,17 @@
 // Specific CSS for your home-page
+body {
+  margin: 0;
+}
 main {
   flex-direction: column;
+}
+
+h1{
+  background-image: asset-url('pexels-cottonbro-4722577.jpg');
+  background-size: cover;
+  height: 10rem;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }

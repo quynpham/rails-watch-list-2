@@ -1,4 +1,4 @@
-<h1>MY MOVIES LISTS</h1>
+<div class='bg'><h1>WHAT ARE WE WATCHING TONIGHT ?</h1></div>
 <ul>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li>
