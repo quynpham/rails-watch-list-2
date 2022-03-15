@@ -1,6 +1,6 @@
-<h1>My movies lists</h1>
-<% @lists.each do |list| %>
+<h1>MY MOVIES LISTS</h1>
 <ul>
-<li><%= link_to list.name, list_path(list) %></li>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
 </ul>
-<% end %>
