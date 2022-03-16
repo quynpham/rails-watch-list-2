@@ -1,6 +1,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  corePlugins: {
+    container: false,
+  },
   content: [
     "./app/helpers/**/*.rb",
     "./app/javascript/**/*.js",
@@ -33,5 +36,6 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/typography"),
+    require('autoprefixer'),
   ],
 }

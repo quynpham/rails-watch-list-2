@@ -1,4 +1,11 @@
 @tailwind base;
+
+@layer base {
+  main {
+    @apply mt-inherit;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 
