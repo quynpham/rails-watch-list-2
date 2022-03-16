@@ -2,7 +2,7 @@
 
 @layer base {
   main {
-    @apply mt-inherit;
+    @apply mt-0;
   }
 }
 

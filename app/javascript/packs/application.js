@@ -14,3 +14,6 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "stylesheets/application";
+import "@fortawesome/fontawesome-free/js/all";
+
+import "controllers"
