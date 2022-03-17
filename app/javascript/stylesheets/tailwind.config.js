@@ -17,13 +17,13 @@ module.exports = {
       xl: "1440px",
     },
     colors: {
-      "dark-blue": "#003049",
-      red: "#D62828",
-      orange: "#ff7849",
-      yellow: "#FCBF49",
-      "gray-dark": "#273444",
-      "light-yellow": "#8492a6",
-      "gray-light": "#d3dce6",
+      midnight: '#003049',
+      curtain: "#D62828",
+      sunnyside: "#ff7849",
+      bee: "#FCBF49",
+      grayer: "#273444",
+      citrus: "#8492a6",
+      lessgrey: "#d3dce6",
     },
     extend: {
       fontFamily: {

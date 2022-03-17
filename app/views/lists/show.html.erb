@@ -5,18 +5,16 @@
       <div>
         <ul class='list-none p-0 grid grid-cols-1 md:grid-cols-2 lg:grid cols-3 gap-2'>
           <% @list.bookmarks.each do |bookmark| %>
-            <li class='border-2 rounded-lg shadow-xl'>
-              <%= image_tag bookmark.movie.poster_url, alt: bookmark.movie.title %>
-                <div class='m-2'>
+            <li class='flex flex-col self-stretch w-80 h-96 m-auto border-2 rounded-lg shadow-xl'>
+              <%= image_tag bookmark.movie.poster_url, alt: bookmark.movie.title, class: 'rounded-t-md' %>
+                <div class='m-2 h-full flex flex-col flex-stretch'>
                   <div class='flex justify-between'>
-                    <p><%= bookmark.movie.title %></p>
+                    <h5><%= bookmark.movie.title %></h5>
                     <p>Rating : <%= bookmark.movie.rating %>/10</p>
                   </div>
-                  <p class='overflow-hidden'><%= bookmark.movie.overview %></p>
-                  <div class='flex justify-between'>
-                    <p><%= bookmark.comment %></p>
-                    <p><%= link_to 'Delete', bookmark_path(bookmark), method: :delete, class: 'no-underline' %></p>
-                  </div>
+                  <p class='grow text-xs'><%= bookmark.movie.overview %></p>
+                  <p class='text-xs font-extrabold'><%= bookmark.comment %></p>
+                  <%= link_to 'Delete', bookmark_path(bookmark), method: :delete, class: 'place-self-end p-2 no-underline border rounded-lg bg-indigo-900 text-white text-xs' %>
                 </div>
             </li>
           <% end %>
