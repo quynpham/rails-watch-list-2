@@ -1,4 +1,4 @@
-<div class='bg'><h1>WHAT ARE WE WATCHING TONIGHT ?</h1></div>
+<h1 class='h-36 flex items-center justify-center text-gray-50'>WHAT ARE WE WATCHING TONIGHT ?</h1>
 <ul>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li>

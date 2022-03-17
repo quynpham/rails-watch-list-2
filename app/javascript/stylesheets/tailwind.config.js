@@ -26,6 +26,9 @@ module.exports = {
       lessgrey: "#d3dce6",
     },
     extend: {
+      backgoundImage: {
+        'curtains': "url('pexels-cottonbro-4722577.jpg')"
+      },
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
