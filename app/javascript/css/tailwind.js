@@ -946,10 +946,5 @@ module.exports = {
     'active',
     'disabled',
   ],
-  plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/typography"),
-    require('autoprefixer')
-  ],
+  plugins: [],
 }
